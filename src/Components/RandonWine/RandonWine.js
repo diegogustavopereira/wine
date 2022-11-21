@@ -1,11 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Card, Container, Table } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import Preload from "../Preload/Preload";
 import RateStar from "../RateStar/RateStar";
 
-
-//funções
 
 function Randon(qtdWines) {
   let randon = [];
@@ -70,8 +68,11 @@ function RandomWine({ apiURL }) {
         <Card.Body>
           <Card.Title>{wine.name}</Card.Title>
           <Card.Subtitle>{wine.winery}</Card.Subtitle>
+          <Card.Img 
+            src={`https://countryflagsapi.com/png/${wine.country}`}
+            style={{height: "1.5rem", width: "auto", padding:"4px"}}
+          />
           <Card.Text>
-            <br></br>
             <b>
               {wine.price.toLocaleString("pt-br", {
                 style: "currency",

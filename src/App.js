@@ -6,7 +6,6 @@ import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import WineDetails from "./Components/WineDetails/WineDetails";
 import WineAdd from "./Components/WineAdd/WineAdd";
 import WineEdit from "./Components/WineEdit/WineEdit";
-import WineList from "./Components/WineList/WineList";
 import Preload from "./Components/Preload/Preload";
 import RandonWine from "./Components/RandonWine/RandonWine";
 import AdegaVirtual from "./Pages/AdegaVirtual/AdegaVirtual";
@@ -19,7 +18,7 @@ function App() {
   return (
     <div className="App">
     
-      <NavigationBar />
+      <NavigationBar className="NavigationBar"/>
       <Routes>
         <Route path="/" element={<Home apiURL={apiURL}/>} />
         <Route path="/pre" element={<Preload />} />
@@ -28,7 +27,7 @@ function App() {
         {/* <Route path="/homepage" element={<Home />} /> */}
         <Route path="/wineadd" element={<WineAdd />} />
         <Route path="/wineedit" element={<WineEdit />} />
-        <Route path="/list" element={<AdegaVirtual />} />
+        <Route path="/list" element={<AdegaVirtual apiURL={apiURL}/>} />
       </Routes>
     </div>
   );
