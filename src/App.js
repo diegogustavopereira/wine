@@ -1,24 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from './logo.svg';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from "./Pages/Home";
-import Navbar from './Components/Navbar/Navbar';
-import WineDetails from './Components/WineDetails/WineDetails';
-import WineAdd from './Components/WineAdd/WineAdd';
-import WineEdit from './Components/WineEdit/WineEdit';
-import WineList from './Components/WineList/WineList';
 
 function App() {
   return (
     <div className="App">
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/winedetails/:id" element={<WineDetails />} />
-      <Route path="/wineadd" element={<WineAdd />} />
-      <Route path="/wineedit" element={<WineEdit />} />
-      <Route path="/list" element={<WineList />} />
-    </Routes>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
