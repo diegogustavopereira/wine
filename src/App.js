@@ -25,10 +25,10 @@ function App() {
         <Route path="/" element={<Home apiURL={apiURL}/>} />
         <Route path="/pre" element={<Preload />} />
         <Route path="/randon" element={<RandonWine apiURL={apiURL}/>} />
-        <Route path="/winedetails/:id" element={<WineDetails />} />
+        <Route path="/winedetails/:id" element={<WineDetails apiURL={apiURL} />} />
         {/* <Route path="/homepage" element={<Home />} /> */}
         <Route path="/wineadd" element={<WineAdd />} />
-        <Route path="/wineedit" element={<WineEdit />} />
+        <Route path="/wineedit" element={<WineEdit apiURL={apiURL}/>} />
         <Route path="/list" element={<AdegaVirtual apiURL={apiURL}/>} />
         <Route path="/about" element={<AboutModal />} />
       </Routes>
