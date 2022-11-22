@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 function WineEdit({ id, apiURL, form, setForm }){
 
-    const navigate = useNavigate()
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchWine = async () => {
@@ -16,7 +16,7 @@ function WineEdit({ id, apiURL, form, setForm }){
             setForm(response.data)
         }
         fetchWine()
-    }, [apiURL, form, setForm])
+    }, [apiURL, id, setForm])
 
     const handleChange = (e) => {
         setForm({...form, [e.target.name]: e.target.value})
@@ -26,12 +26,13 @@ function WineEdit({ id, apiURL, form, setForm }){
         e.preventDefault()
 
         try {
-            const clone = {... form}
+            const clone = {...form}
             delete clone._id
 
-            await axios.put(`${apiURL}/${id}`)
+            await axios.put(`${apiURL}/${id}`, clone)
             
-            navigate("/winedetails/:id")
+            navigate(`/winedetails/${id}`)
+
         } catch (error) {
             console.log(error)
         }
@@ -39,7 +40,7 @@ function WineEdit({ id, apiURL, form, setForm }){
 
     return(
         <div>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="secondary" onClick={handleShow}>
                 Editar funcionário
             </Button>
             
