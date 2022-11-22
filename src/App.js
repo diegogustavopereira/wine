@@ -9,6 +9,8 @@ import WineEdit from "./Components/WineEdit/WineEdit";
 import Preload from "./Components/Preload/Preload";
 import RandonWine from "./Components/RandonWine/RandonWine";
 import AdegaVirtual from "./Pages/AdegaVirtual/AdegaVirtual";
+import AboutModal from "./Components/About/About"
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
         <Route path="/wineadd" element={<WineAdd />} />
         <Route path="/wineedit" element={<WineEdit />} />
         <Route path="/list" element={<AdegaVirtual apiURL={apiURL}/>} />
+        <Route path="/about" element={<AboutModal />} />
       </Routes>
     </div>
   );
