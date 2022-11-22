@@ -97,12 +97,13 @@ function WineDetails({ apiURL, form, setForm }) {
                     </Button>
                   </Col>
                   <Col>
-                    <Button
+                    <WineEdit id={ id } apiURL={ apiURL} form={ form } setForm={ setForm } />
+                    {/* <Button
                       variant="secondary"
                       onClick={() => WineEdit(wine.id)}
                     >
                       Editar Informações
-                    </Button>
+                    </Button> */}
                   </Col>
                   <Col>
                     <Button
