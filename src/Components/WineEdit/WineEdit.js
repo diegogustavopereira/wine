@@ -89,16 +89,6 @@ function WineEdit({ apiURL, form, setForm, id }){
                             />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Avaliação</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Insira a avaliação"
-                                name="evaluation"
-                                value={form.evaluation}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                        <Form.Group>
                             <Form.Label>Preço Sugerido</Form.Label>
                             <Form.Control
                                 type="text"
