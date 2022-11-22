@@ -1,3 +1,21 @@
+.SearchInput {
+    width: 30rem;
+    margin-left: 40rem;
+    padding-Top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+}
+
+.SerchInputImg {
+    position: absolute;
+    padding-right: 10px;
+    
+
+}
+
 .ContainerAdega{
     margin-top: -55px;
     padding-left: 0px;
@@ -11,6 +29,7 @@
 
 .CardsList {
     padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
