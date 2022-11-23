@@ -57,6 +57,7 @@ function AdegaVirtual({ apiURL }) {
           className="cardItem"
           style={{ width: "20rem", WebkitMaskAttachment: "fixed" }}
         >
+          <a href={`/winedetails/${wine._id}`} class="stretched-link"></a>
           <Card.Img
             variant="top"
             src={wine.image}
