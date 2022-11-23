@@ -16,7 +16,7 @@ function WineAdd({ apiURL, form, setForm }) {
       
       navigate(`/list`);
 
-      toast.success('Novo Vinho cadastrado!', {
+      toast.success('Novo vinho cadastrado!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,

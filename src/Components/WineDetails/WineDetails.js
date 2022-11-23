@@ -30,7 +30,7 @@ function WineDetails({ apiURL, form, setForm }) {
   const deleteWine = async (id) => {
     await axios.delete(`${apiURL}/${id}`);
     navigate("/list");
-    toast.success('Vinho deletado com sucesso!', {
+    toast.success('Vinho excluído com sucesso!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
