@@ -1,5 +1,5 @@
 import "./AdegaVirtual.css";
-import { Card, Container, InputGroup, ToastContainer } from "react-bootstrap";
+import { Card, Container, InputGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import searchIcon from "../../assets/search.svg";
 import { useEffect, useState } from "react";
