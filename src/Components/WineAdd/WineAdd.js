@@ -108,12 +108,26 @@ function WineAdd({ apiURL, form, setForm }) {
               <Form.Label>Avaliação</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Insira a nota para o vinho"
+                placeholder="Insira a nota deste vinho"
                 name="evaluation"
                 value={form.evaluation}
                 onChange={handleChange}
+                max="5"
+                min="0"
               />
             </Col>
+          </Row>
+          <Row style={{ margin: "15px" }}>
+            <Form.Group>
+              <Form.Label>Harmonização</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Insira o(s) alimento(s) que harmoniza(m) com este vinho"
+                name="pairing"
+                value={form.pairing}
+                onChange={handleChange}
+              />
+            </Form.Group>
           </Row>
           <Row style={{ margin: "15px" }}>
             <Form.Group>

@@ -64,7 +64,6 @@ function WineEdit({ apiURL, form, setForm, id }){
                             <Form.Label>Nome do Vinho</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira o nome do vinho"
                                 name="name"
                                 value={form.name}
                                 onChange={handleChange}
@@ -74,7 +73,6 @@ function WineEdit({ apiURL, form, setForm, id }){
                             <Form.Label>Vinícola</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira o nome da vinícola"
                                 name="winery"
                                 value={form.winery}
                                 onChange={handleChange}
@@ -84,7 +82,6 @@ function WineEdit({ apiURL, form, setForm, id }){
                             <Form.Label>País de Origem</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira o nome do país de origem"
                                 name="country"
                                 value={form.country}
                                 onChange={handleChange}
@@ -94,7 +91,6 @@ function WineEdit({ apiURL, form, setForm, id }){
                             <Form.Label>Região</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira o nome da região"
                                 name="region"
                                 value={form.region}
                                 onChange={handleChange}
@@ -104,9 +100,17 @@ function WineEdit({ apiURL, form, setForm, id }){
                             <Form.Label>Preço Sugerido</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira o preço sugerido"
                                 name="price"
                                 value={form.price}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
+                            <Form.Label>Harmonização</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="pairing"
+                                value={form.pairing}
                                 onChange={handleChange}
                             />
                         </Form.Group>

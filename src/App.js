@@ -27,6 +27,7 @@ function App() {
     region: "",
     evaluation: [],
     price: 0,
+    pairing: "",
     image: "",
   })
   

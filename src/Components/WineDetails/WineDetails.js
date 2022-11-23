@@ -86,13 +86,13 @@ function WineDetails({ apiURL, form, setForm }) {
                   </Card.Text>
                   <Card.Text>
                     Preço Sugerido:{" "}
-                    {wine.price.toLocaleString("pt-br", {
+                    {Number(wine.price).toLocaleString("pt-br", {
                       style: "currency",
                       currency: "BRL",
                     })}
                   </Card.Text>
                   <Card.Text>
-                    Harmoniza com: carne de vaca, cordeiro, aves
+                    Harmoniza com: {wine.pairing}
                   </Card.Text>
                 </Col>
                 <Row>
@@ -108,12 +108,6 @@ function WineDetails({ apiURL, form, setForm }) {
                   </Col>
                   <Col>
                     <WineEdit id={ id } apiURL={ apiURL} form={ form } setForm={ setForm } />
-                    {/* <Button
-                      variant="secondary"
-                      onClick={() => WineEdit(wine.id)}
-                    >
-                      Editar Informações
-                    </Button> */}
                   </Col>
                   <Col>
                     <Button

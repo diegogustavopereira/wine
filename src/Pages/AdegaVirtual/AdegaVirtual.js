@@ -72,7 +72,7 @@ function AdegaVirtual({ apiURL }) {
             />
             <Card.Text>
               <b>
-                {wine.price.toLocaleString("pt-br", {
+                {Number(wine.price).toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
                 })}
