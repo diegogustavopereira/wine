@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { Button, Form, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function WineEdit({ apiURL, form, setForm, id }){
 
@@ -31,7 +32,18 @@ function WineEdit({ apiURL, form, setForm, id }){
 
             await axios.put(`${apiURL}/${id}`, clone)
             
-            navigate(`/winedetails/${id}`)
+            navigate("/list")
+
+            toast.success('Dados atualizados!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
 
         } catch (error) {
             console.log(error)
@@ -58,7 +70,7 @@ function WineEdit({ apiURL, form, setForm, id }){
                                 onChange={handleChange}
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
                             <Form.Label>Vinícola</Form.Label>
                             <Form.Control
                                 type="text"
@@ -68,7 +80,7 @@ function WineEdit({ apiURL, form, setForm, id }){
                                 onChange={handleChange}
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
                             <Form.Label>País de Origem</Form.Label>
                             <Form.Control
                                 type="text"
@@ -78,7 +90,7 @@ function WineEdit({ apiURL, form, setForm, id }){
                                 onChange={handleChange}
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
                             <Form.Label>Região</Form.Label>
                             <Form.Control
                                 type="text"
@@ -88,7 +100,7 @@ function WineEdit({ apiURL, form, setForm, id }){
                                 onChange={handleChange}
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
                             <Form.Label>Preço Sugerido</Form.Label>
                             <Form.Control
                                 type="text"
@@ -99,7 +111,7 @@ function WineEdit({ apiURL, form, setForm, id }){
                             />
                         </Form.Group>
                         
-                        <Button variant="success" type="submit">Atualizar Informações</Button>
+                        <Button variant="success" type="submit" style={{ margin: "15px" }}>Atualizar Informações</Button>
                     </Form>
                 </Modal.Body>
             </Modal>

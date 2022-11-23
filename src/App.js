@@ -11,6 +11,8 @@ import RandonWine from "./Components/RandonWine/RandonWine";
 import AdegaVirtual from "./Pages/AdegaVirtual/AdegaVirtual";
 import AboutModal from "./Components/About/About"
 import { useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -24,13 +26,13 @@ function App() {
     country: "",
     region: "",
     evaluation: [],
-    price: "",
+    price: 0,
     image: "",
   })
   
   return (
     <div className="App">
-    
+      <ToastContainer />
       <NavigationBar className="NavigationBar"/>
       <Routes>
         <Route path="/" element={<Home apiURL={apiURL}/>} />

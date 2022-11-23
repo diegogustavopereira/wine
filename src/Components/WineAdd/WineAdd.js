@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify'
 
 function WineAdd({ apiURL, form, setForm }) {
   const handleChange = (e) => {
@@ -9,9 +10,23 @@ function WineAdd({ apiURL, form, setForm }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
       await axios.post(apiURL, form);
-      navigate("/list");
+      
+      navigate(`/list`);
+
+      toast.success('Novo Vinho cadastrado!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
     } catch (error) {
       console.log(error);
     }
@@ -92,27 +107,31 @@ function WineAdd({ apiURL, form, setForm }) {
             <Col>
               <Form.Label>Avaliação</Form.Label>
               <Form.Control
-                    type="number"
-                    placeholder="Insira a nota para o vinho"
-                    name="evaluation"
-                    value={form.evaluation}
-                    onChange={handleChange}
-                />
+                type="number"
+                placeholder="Insira a nota para o vinho"
+                name="evaluation"
+                value={form.evaluation}
+                onChange={handleChange}
+              />
             </Col>
           </Row>
           <Row style={{ margin: "15px" }}>
             <Form.Group>
-                <Form.Label>URL da Imagem</Form.Label>
-                <Form.Control
-                    type="text"
-                    placeholder="Insira o endereço da imagem"
-                    name="image"
-                    value={form.image}
-                    onChange={handleChange}
-                />
+              <Form.Label>URL da Imagem</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Insira o endereço da imagem"
+                name="image"
+                value={form.image}
+                onChange={handleChange}
+              />
             </Form.Group>
           </Row>
-          <Button variant="success" type="submit" style={{ padding: "10px", margin: "15px" }}>
+          <Button
+            variant="success"
+            type="submit"
+            style={{ padding: "10px", margin: "15px" }}
+          >
             Cadastrar Novo Vinho
           </Button>
         </Form>

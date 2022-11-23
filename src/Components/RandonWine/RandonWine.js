@@ -86,8 +86,7 @@ function RandomWine({ apiURL }) {
           <RateStar
             evaluation={
               wine.evaluation.reduce((soma, current) => soma + current, 0) /
-              wine.evaluation.length /
-              2
+              wine.evaluation.length
             }
           />
         </Card.Body>

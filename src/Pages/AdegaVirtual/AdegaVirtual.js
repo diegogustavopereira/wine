@@ -1,5 +1,5 @@
 import "./AdegaVirtual.css";
-import { Card, Container, InputGroup } from "react-bootstrap";
+import { Card, Container, InputGroup, ToastContainer } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import searchIcon from "../../assets/search.svg";
 import { useEffect, useState } from "react";
@@ -81,8 +81,7 @@ function AdegaVirtual({ apiURL }) {
             <RateStar
               evaluation={
                 wine.evaluation.reduce((soma, current) => soma + current, 0) /
-                wine.evaluation.length /
-                2
+                wine.evaluation.length
               }
             />
           </Card.Body>

@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Preload from "../Preload/Preload";
 import WineEdit from "../WineEdit/WineEdit";
 import RateStar from "../RateStar/RateStar";
+import { toast } from 'react-toastify';
 
 function WineDetails({ apiURL, form, setForm }) {
   const [wine, setWine] = useState({});
@@ -29,6 +30,16 @@ function WineDetails({ apiURL, form, setForm }) {
   const deleteWine = async (id) => {
     await axios.delete(`${apiURL}/${id}`);
     navigate("/list");
+    toast.success('Vinho deletado com sucesso!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+  });
   };
 
   return (
@@ -69,8 +80,7 @@ function WineDetails({ apiURL, form, setForm }) {
                           (soma, current) => soma + current,
                           0
                         ) /
-                        wine.evaluation.length /
-                        2
+                        wine.evaluation.length
                       }
                     />
                   </Card.Text>
