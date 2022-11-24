@@ -75,14 +75,7 @@ function WineDetails({ apiURL, form, setForm }) {
                   <Card.Text>
                     Avaliação{" "}
                     <RateStar
-                      evaluation={
-                        wine.evaluation.reduce(
-                          (soma, current) => soma + current,
-                          0
-                        ) /
-                        wine.evaluation.length
-                      }
-                    />
+                      evaluation={Number(wine.evaluation)}/>
                   </Card.Text>
                   <Card.Text>
                     Preço Sugerido:{" "}
@@ -96,11 +89,11 @@ function WineDetails({ apiURL, form, setForm }) {
                   </Card.Text>
                 </Col>
                 <Row>
-                <Row>
+                {/* <Row>
                   <Button variant="link">
                     Já experimentou? Deixe sua avaliação!
                   </Button>
-                </Row>
+                </Row> */}
                   <Col>
                     <Button variant="primary" onClick={() => navigate("/list")}>
                       Voltar

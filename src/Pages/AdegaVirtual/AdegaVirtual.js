@@ -79,12 +79,8 @@ function AdegaVirtual({ apiURL }) {
               </b>
             </Card.Text>
             <RateStar
-              evaluation={
-                wine.evaluation.reduce((soma, current) => soma + current, 0) /
-                wine.evaluation.length
-              }
-            />
-          </Card.Body>
+              evaluation={Number(wine.evaluation)}/>
+            </Card.Body>
         </Card>
       );
     });

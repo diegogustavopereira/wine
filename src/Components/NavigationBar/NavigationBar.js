@@ -23,7 +23,7 @@ function NavigationBar() {
             <Nav className="me-auto">
               <Nav.Link href="/list">Adega Virtual</Nav.Link>
               <Nav.Link href="/wineadd">Adicionar um Vinho</Nav.Link>
-              <Nav.Link href="#link">Curiosidades</Nav.Link>
+              {/* <Nav.Link href="#link">Curiosidades</Nav.Link> */}
               <Nav.Link href="/about">Sobre</Nav.Link>
             </Nav>
           </Navbar.Collapse>

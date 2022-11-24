@@ -76,18 +76,14 @@ function RandomWine({ apiURL }) {
           />
           <Card.Text>
             <b>
-              {wine.price.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
+            {Number(wine.price).toLocaleString("pt-br", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
             </b>
           </Card.Text>
           <RateStar
-            evaluation={
-              wine.evaluation.reduce((soma, current) => soma + current, 0) /
-              wine.evaluation.length
-            }
-          />
+            evaluation={Number(wine.evaluation)}/>
         </Card.Body>
       </Card>
     );
