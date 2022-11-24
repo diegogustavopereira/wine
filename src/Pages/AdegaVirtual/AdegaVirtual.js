@@ -1,5 +1,5 @@
 import "./AdegaVirtual.css";
-import { Card, Container, InputGroup } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import searchIcon from "../../assets/search.svg";
 import { useEffect, useState } from "react";
@@ -86,8 +86,8 @@ function AdegaVirtual({ apiURL }) {
     });
 
   return (
-    <div className="ContainerAdega">
-      <Container>
+    <div>
+      <Container className="ContainerAdega">
         <SearchBar />
         {isLoading && <Preload />}
         {!isLoading && <div className="CardsList">{WineGrid.reverse()}</div>}

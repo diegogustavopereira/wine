@@ -1,26 +1,21 @@
 .SearchInput {
-    width: 30rem;
-    margin-left: 40rem;
-    padding-Top: 8px;
+    width: 65vw;
+    padding-Top: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content:flex-end;
     align-items: center;
-    position: absolute;
+    -webkit-box-shadow: 0px 0px 32px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 32px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 32px -1px rgba(0,0,0,0.75);
 }
 
 .SerchInputImg {
     position: absolute;
     padding-right: 10px;
-    
-
 }
 
 .ContainerAdega{
-    margin-top: -55px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,8 +23,8 @@
 }
 
 .CardsList {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

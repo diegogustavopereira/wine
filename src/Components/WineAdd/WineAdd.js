@@ -114,6 +114,7 @@ function WineAdd({ apiURL, form, setForm }) {
                 onChange={handleChange}
                 max="5"
                 min="0"
+                step="0.5"
               />
             </Col>
           </Row>
