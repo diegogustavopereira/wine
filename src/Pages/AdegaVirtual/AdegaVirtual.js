@@ -57,6 +57,7 @@ function AdegaVirtual({ apiURL }) {
           className="cardItem"
           style={{ width: "20rem", WebkitMaskAttachment: "fixed" }}
         >
+          <a href={`/winedetails/${wine._id}`} class="stretched-link"></a>
           <Card.Img
             variant="top"
             src={wine.image}
@@ -71,7 +72,7 @@ function AdegaVirtual({ apiURL }) {
             />
             <Card.Text>
               <b>
-                {wine.price.toLocaleString("pt-br", {
+                {Number(wine.price).toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
                 })}
@@ -93,7 +94,7 @@ function AdegaVirtual({ apiURL }) {
       <Container>
         <SearchBar />
         {isLoading && <Preload />}
-        {!isLoading && <div className="CardsList">{WineGrid}</div>}
+        {!isLoading && <div className="CardsList">{WineGrid.reverse()}</div>}
       </Container>
     </div>
   );

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import Preload from "../Preload/Preload";
 import RateStar from "../RateStar/RateStar";
+import WineDetails from "../WineDetails/WineDetails";
 
 
 function Randon(qtdWines) {
@@ -59,7 +60,8 @@ function RandomWine({ apiURL }) {
 
   const cardWines = wines.map((wine) => {
     return (
-      <Card key={wine._id} className="cardItem" style={{ width: "20rem" }}>
+      <Card key={wine._id} className="cardItem" style={{ width: "20rem" }} >
+      <a href={`/winedetails/${wine._id}`} class="stretched-link"></a>
         <Card.Img
           variant="top"
           src={wine.image}

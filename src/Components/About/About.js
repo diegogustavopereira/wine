@@ -1,9 +1,21 @@
-import { Button, Modal } from "react-bootstrap";
+import { Button, Card, Modal } from "react-bootstrap";
 
 function About() {
-
-    return (
-      <div></div>
+  return (
+    <div>
+      <Card style={{ margin: "80px", padding: "15px" }}>
+        <Card.Title>🍷 Sobre nós 🍷</Card.Title>
+        <Card.Text>
+          Esta aplicação foi desenvolvida no encerramento do Módulo II do
+          Bootcamp de Web Development Full Time - turma 91 por Diego Gustavo
+          Pereira e Paula Bittencourt Gomes.
+        </Card.Text>
+        <Card.Text>
+          Este curso é produto de uma parceira entre a Escola Nacional de
+          Administração Pública (ENAP) e a IronHack.
+        </Card.Text>
+      </Card>
+    </div>
     //     <Modal
     //   {...props}
     //   size="lg"
@@ -27,6 +39,6 @@ function About() {
     //     <Button onClick={props.onHide}>Close</Button>
     //   </Modal.Footer>
     // </Modal>
-    )
+  );
 }
 export default About;
