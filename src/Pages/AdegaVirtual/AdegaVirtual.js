@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import RateStar from "../../Components/RateStar/RateStar";
 import Preload from "../../Components/Preload/Preload";
-import { useForm } from "rc-field-form";
+
 
 function AdegaVirtual({ apiURL }) {
   const [winesList, setWinesList] = useState([]);
