@@ -61,7 +61,6 @@ function RandomWine({ apiURL }) {
   const cardWines = wines.map((wine) => {
     return (
       <Card key={wine._id} className="cardItem" style={{ width: "20rem" }} >
-      {/* onClick={() => WineDetails(wine._id)} */}
       <a href={`/winedetails/${wine._id}`} class="stretched-link"></a>
         <Card.Img
           variant="top"

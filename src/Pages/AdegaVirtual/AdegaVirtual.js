@@ -94,7 +94,7 @@ function AdegaVirtual({ apiURL }) {
       <Container>
         <SearchBar />
         {isLoading && <Preload />}
-        {!isLoading && <div className="CardsList">{WineGrid}</div>}
+        {!isLoading && <div className="CardsList">{WineGrid.reverse()}</div>}
       </Container>
     </div>
   );
