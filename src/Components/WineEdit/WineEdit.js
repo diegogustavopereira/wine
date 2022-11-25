@@ -97,9 +97,18 @@ function WineEdit({ apiURL, form, setForm, id }){
                             />
                         </Form.Group>
                         <Form.Group style={{ margin: "10px 0 0 0" }}>
+                            <Form.Label>Avaliação</Form.Label>
+                            <Form.Control
+                                type="number"
+                                name="evaluation"
+                                value={form.evaluation}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                        <Form.Group style={{ margin: "10px 0 0 0" }}>
                             <Form.Label>Preço Sugerido</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="number"
                                 name="price"
                                 value={form.price}
                                 onChange={handleChange}

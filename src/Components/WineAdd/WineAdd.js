@@ -96,7 +96,7 @@ function WineAdd({ apiURL, form, setForm }) {
               <Form.Group>
                 <Form.Label>Preço Sugerido</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="Insira o preço sugerido"
                   name="price"
                   value={form.price}

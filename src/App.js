@@ -25,7 +25,7 @@ function App() {
     winery: "",
     country: "",
     region: "",
-    evaluation: [],
+    evaluation: "",
     price: 0,
     pairing: "",
     image: "",
